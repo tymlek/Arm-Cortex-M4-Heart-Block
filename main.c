@@ -76,7 +76,7 @@ int main(void){
 // Outputs: None
 // Notes: ...
 void PortF_Init(void){
-	volatile unsigned long delay;
+  volatile unsigned long delay;
   SYSCTL_RCGC2_R |= 0x00000020;      // 1) F clock
   delay = SYSCTL_RCGC2_R;            // delay to allow clock to stabilize     
   GPIO_PORTF_AMSEL_R &= 0x00;        // 2) disable analog function
